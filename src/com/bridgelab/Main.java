@@ -24,6 +24,14 @@ public class Main {
 			
 			System.out.println("entered last name is not valid");
 		}
+		System.out.println("enter mail address to validate");
+		String mail=sc.next();
+		if(user.validateMail(mail)==true) {
+			System.out.println("entered mail address is valid");
+		}else {
+			
+			System.out.println("entered mail address is not valid");
+		}
 
 	}
 

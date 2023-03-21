@@ -14,4 +14,9 @@ public class UserRegistration {
 	 return matches;
  
 }
-}
+ public boolean validateMail(String Mail) {
+	 Pattern pat=Pattern.compile("^[abc]{3}[.]{1}[a-z]{3}[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[in]{2}");
+	 boolean matches=pat.matcher(Mail).matches();
+	 return matches;
+
+}}
