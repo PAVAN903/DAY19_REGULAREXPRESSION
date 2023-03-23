@@ -37,8 +37,14 @@ public class UserRegistration {
 	}
 
 	public boolean validatePassword1(String PasswordSpcl) {
-		Pattern pat = Pattern.compile("^[a-z0-9]{8}[!@#$%^&*]{1,}");
+		Pattern pat = Pattern.compile("^[a-z0-9]{8}[A-Z]{1,}");
 		boolean matches = pat.matcher(PasswordSpcl).matches();
+		return matches;
+
+	}
+	public boolean validatePassword2(String Password) {
+		Pattern pat = Pattern.compile("^[a-z]{8}[A-Z]{1,}[0-9]{1,}");
+		boolean matches = pat.matcher(Password).matches();
 		return matches;
 
 	}

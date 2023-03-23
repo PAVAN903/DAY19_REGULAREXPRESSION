@@ -56,6 +56,15 @@ public class Main {
 
 			System.out.println("entered password is not valid");
 		}
+		System.out.println("enter password to validate");
+		String password2 = sc.next();
+		if (user.validatePassword2(password2) == true) {
+			System.out.println("entered password is valid");
+		} else {
+
+			System.out.println("entered password is not valid");
+		}
+
 
 	}
 
