@@ -32,6 +32,15 @@ public class Main {
 			
 			System.out.println("entered mail address is not valid");
 		}
+		System.out.println("enter pnone number to validate");
+		String phone_number=sc.next();
+		if(user.validateMobileNumberl(phone_number)==true) {
+			System.out.println("entered phone number is valid");
+		}else {
+			
+			System.out.println("entered phone number is not valid");
+		}
+		
 
 	}
 
