@@ -40,6 +40,16 @@ public class Main {
 			
 			System.out.println("entered phone number is not valid");
 		}
+		System.out.println("enter password to validate");
+		String password=sc.next();
+		if(user.validatePassword(password)==true) {
+			System.out.println("entered password is valid");
+		}else {
+			
+			System.out.println("entered password is not valid");
+		}
+		
+		
 		
 
 	}

@@ -28,4 +28,8 @@ public class UserRegistration {
 		return matches;
 
 	}
-}
+	public boolean validatePassword (String Password) {
+		Pattern pat = Pattern.compile("^[a-z0-9]{8}");
+		boolean matches = pat.matcher(Password).matches();
+		return matches;
+}}
