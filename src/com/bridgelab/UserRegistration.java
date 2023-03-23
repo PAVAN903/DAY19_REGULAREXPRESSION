@@ -22,14 +22,24 @@ public class UserRegistration {
 		return matches;
 
 	}
+
 	public boolean validateMobileNumberl(String Mobile) {
 		Pattern pat = Pattern.compile("^91\\s[0-9]{10}$");
 		boolean matches = pat.matcher(Mobile).matches();
 		return matches;
 
 	}
-	public boolean validatePassword (String Password) {
+
+	public boolean validatePassword(String Password) {
 		Pattern pat = Pattern.compile("^[a-z0-9]{8}");
 		boolean matches = pat.matcher(Password).matches();
 		return matches;
-}}
+	}
+
+	public boolean validatePassword1(String PasswordSpcl) {
+		Pattern pat = Pattern.compile("^[a-z0-9]{8}[!@#$%^&*]{1,}");
+		boolean matches = pat.matcher(PasswordSpcl).matches();
+		return matches;
+
+	}
+}
