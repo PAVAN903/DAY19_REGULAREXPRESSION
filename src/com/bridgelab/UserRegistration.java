@@ -17,7 +17,7 @@ public class UserRegistration {
 	}
 
 	public boolean validateMail(String Mail) {
-		Pattern pat = Pattern.compile("^[abc]{3}[.]{1}[a-z]{3}[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[in]{2}");
+		Pattern pat = Pattern.compile("^[a-z]{5,}[0-9]{3,}@[a-z]{5,}[.]{1}[com]{3}");
 		boolean matches = pat.matcher(Mail).matches();
 		return matches;
 
@@ -31,28 +31,10 @@ public class UserRegistration {
 	}
 
 	public boolean validatePassword(String Password) {
-		Pattern pat = Pattern.compile("^[a-z0-9]{8}");
+		Pattern pat = Pattern.compile("^[a-z]{8}[0-9]{1,}[!@#$%^&*]{1,}[A-Z]{1,}");
 		boolean matches = pat.matcher(Password).matches();
 		return matches;
 	}
 
-	public boolean validatePassword1(String PasswordSpcl) {
-		Pattern pat = Pattern.compile("^[a-z0-9]{8}[A-Z]{1,}");
-		boolean matches = pat.matcher(PasswordSpcl).matches();
-		return matches;
-
-	}
-
-	public boolean validatePassword2(String Password) {
-		Pattern pat = Pattern.compile("^[a-z]{8}[A-Z]{1,}[0-9]{1,}");
-		boolean matches = pat.matcher(Password).matches();
-		return matches;
-
-	}
-	public boolean validatePassword3(String Password) {
-		Pattern pat = Pattern.compile("^[a-z]{8}[A-Z]{1,}[0-9]{1,}[!@#$%^&*]{1,}");
-		boolean matches = pat.matcher(Password).matches();
-		return matches;
-
-	}
+	
 }
